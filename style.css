@@ -6,6 +6,7 @@
     --hansans: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
     --blue :#477CE1;
     --black : #12161A;
+    --purple : #5357CA;
     --nanummyeongjo : 'Nanum Myeongjo', 'serif';
     --nanumbarungothic:'NanumBarunGothic';
 }
@@ -205,6 +206,57 @@ main>section {margin-top:80px;}
 }
 
 
+
+.grid_section {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+}
+.grid_section img {
+    border-radius:15px;
+    transition: .3s;
+}
+
+.grid_section img:hover {
+    box-shadow:0 5px 30px rgba(0,0,0,.25);
+}
+
+.latest_list{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.barea {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.barea_item {
+    width:265px;
+    height:265px;
+    margin:42px;
+    background-size:100% 100%;
+    background-position: center center;
+    transition: .3s;
+    border-radius: 5px;
+}
+.barea_item:hover { background-size:120% 120%; box-shadow: 0 5px 30px rgba(0,0,0,.5);}
+.barea_item:nth-child(odd) {margin-left:0; margin-right:0;}
+
+.barea_item {display:flex; justify-content: center; align-items: center;}
+.barea_item h2 {
+    letter-spacing: 0.05em;
+    color: var(--white);
+    font-size: 26px;
+    font-family: var(--nanumbarungothic);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+
 #main_footer {background: #2f2f2f; width:100%; padding:30px 0;}
 #main_footer .footer_top {
     display:flex;
@@ -219,3 +271,4 @@ main>section {margin-top:80px;}
 #main_footer .footer_content {padding-top:15px; display:flex; justify-content: space-between;}
 #main_footer .footer_content .footer_info ul {list-style:none;}
 #main_footer .footer_content .footer_info ul li {font-size:12px; color:var(--lightgrey)}
+
